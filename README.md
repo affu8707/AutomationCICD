@@ -3,7 +3,7 @@
 A Selenium WebDriver automation project testing the Rahul Shetty Academy Client e-commerce application (`https://rahulshettyacademy.com/client/`), focusing on the login, product selection, cart, and checkout flow.
 
 ## Tech Stack
-- **Language:** Java 1.8
+- **Language:** Java 11
 - **Browser Automation:** Selenium WebDriver (4.38.0)
 - **Build Tool:** Maven
 - **Test Framework:** TestNG (7.11.0)
