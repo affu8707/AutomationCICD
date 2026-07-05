@@ -20,13 +20,13 @@ public class CheckOutPage extends AbstractComponent {
 		// TODO Auto-generated constructor stub
 	}
 	
-	@FindBy(css="action__submit")
+	@FindBy(css=".action__submit")
 	WebElement submit;
 	
 	@FindBy(css="input[placeholder='Select Country']")
 	WebElement country;
 	
-	@FindBy(xpath = "//button[contains(@class, 'ta-item')])[2]")
+	@FindBy(xpath = "(//button[contains(@class, 'ta-item')])[2]")
 	WebElement selectCountry;
 	
 	By result = By.className("ta-results");
@@ -36,14 +36,14 @@ public class CheckOutPage extends AbstractComponent {
 		a.sendKeys(country, countryName).build().perform();
 
 		waitForElementToAppear(result);
-		selectCountry.click();
+		((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", selectCountry);
 		
 		
 	}
 	
 	public confirmationPage submitOrder()
 	{
-		submit.click();
+		((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", submit);
 		return new confirmationPage(driver);
 	}
 	
