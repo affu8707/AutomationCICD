@@ -36,7 +36,12 @@ public class LandingPage extends AbstractComponent {
 	public void login_Application(String email, String password) {
 		userEmail.sendKeys(email);
 		userPassword.sendKeys(password);
-		submit.click();
+		try {
+			submit.click();
+		} catch (Exception e) {
+			org.openqa.selenium.JavascriptExecutor js = (org.openqa.selenium.JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", submit);
+		}
 	}
 
 	public void goTo() {
