@@ -32,7 +32,11 @@ public class AbstractComponent {
 	
 	public void goToCartPage()
 	{
-		cartHeader.click();
+		try {
+			cartHeader.click();
+		} catch (Exception e) {
+			((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", cartHeader);
+		}
 	}
 
 	public void waitForElementToDisappear(WebElement ele) throws InterruptedException {
