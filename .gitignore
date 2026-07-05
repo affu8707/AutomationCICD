@@ -1,0 +1,15 @@
+target/
+*.class
+test-output/
+surefire-reports/
+extent-reports/
+reports/
+screenshots/
+*.log
+.settings/
+.classpath
+.project
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
