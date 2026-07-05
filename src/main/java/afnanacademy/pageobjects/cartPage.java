@@ -29,7 +29,7 @@ public class cartPage extends AbstractComponent {
 	@FindBy(css = ".totalRow button")
 	WebElement checkoutEle;
 
-	@FindBy(id = ".cartSection h3")
+	@FindBy(css = ".cartSection h3")
 	private List<WebElement> productTitles;
 
 	
