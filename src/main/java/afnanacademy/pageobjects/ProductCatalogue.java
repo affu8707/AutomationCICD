@@ -55,7 +55,8 @@ public class ProductCatalogue extends AbstractComponent {
 
 	public void addProductToCart(String productName) throws InterruptedException {
 		WebElement prod = getProductByName(productName);
-		prod.findElement(addToCart).click();
+		WebElement addToCartBtn = prod.findElement(addToCart);
+		((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", addToCartBtn);
 		waitForElementToAppear(toastMessage);
 		waitForElementToDisappear(prod);
 		

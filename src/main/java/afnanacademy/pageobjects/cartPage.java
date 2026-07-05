@@ -42,7 +42,7 @@ public class cartPage extends AbstractComponent {
 	}
 	
 	public CheckOutPage goToCheckout() {
-		checkoutEle.click();
+		((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", checkoutEle);
 		
 		return new CheckOutPage(driver);
 	}
